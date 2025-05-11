@@ -21,7 +21,7 @@ router.post('/ask', async (req, res) => {
   
       // Call your actual backend API or DB here
       try {
-        const flightRes = await axios.post('http://localhost:5000/api/flights/save-flights', {
+        const flightRes = await axios.post(`${process.env.BASE_URL}/api/flights/save-flights`, {
             departureCity: source,
             arrivalCity: destination,
             departureCityCode: sourceCode,
