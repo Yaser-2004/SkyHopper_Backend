@@ -7,6 +7,8 @@ const router = express.Router();
 
 router.post('/ask', async (req, res) => {
   const { message } = req.body;
+  console.log(process.env.SKYBOT_KEY);
+  
 
   if (message.toLowerCase().includes("flights between")) {
     const regex = /flights between (\w+) and (\w+)/i;
