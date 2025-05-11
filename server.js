@@ -13,6 +13,7 @@ const port = 5000;
 
 app.use(express.json());
 const allowedOrigins = [
+    'https://sky-hopper-flax.vercel.app/',
     'http://localhost:8080'
   ];
   
