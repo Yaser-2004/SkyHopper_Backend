@@ -103,7 +103,7 @@ router.post('/ask', async (req, res) => {
       },
       {
         headers: {
-          'Authorization': `Bearer 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`,
+          'Authorization': `Bearer ${process.env.SKYBOT_KEY}`,
           'Content-Type': 'application/json',
         },
       }

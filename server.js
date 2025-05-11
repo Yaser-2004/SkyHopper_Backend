@@ -29,7 +29,7 @@ credentials: true
 env.config();
 
 mongoose
-    .connect('mongodb+srv://yasersiddiquee:vXsydD44gfdsinea@cluster0.g0y42pp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+    .connect(process.env.MONGODB_URI)
     .then(() => console.log('MongoDB Connected...'))
     .catch(err => console.log("Mongo connection error --->", err));
 
